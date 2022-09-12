@@ -15,7 +15,14 @@ while True:
         namn = input("Ange namn på nya barnet")
         stefansBarn.append(namn)
     elif action == "5":
-        pass
+        searchQuery = input("Sök efter:").lower()
+        for namn in stefansBarn:
+            lowerCaseNamn = namn.lower()
+            index = lowerCaseNamn.find(searchQuery)
+            if index != -1:
+                print(namn)
+
+        
     
 
 antal = len(stefansBarn)
