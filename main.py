@@ -1,22 +1,22 @@
-stefansBarn = ["Fanny", "Josefine", "Oliver"]
+allPlayers = ["Mats Sundin", "Peter Forsberg", "Anders Eldebrink"]
 while True:
-    print("1. Lista alla barn")
-    print("2. Skriv ut hur många barn")
-    print("3. Lägg till barn")
-    print("4. Ta bort barn")
+    print("1. Lista alla spelare")
+    print("2. Skriv ut hur många spelare")
+    print("3. Lägg till spelare")
+    print("4. Ta bort spelare")
     print("5. Söka")
     action = input("Ange val:")
     if action == "2":
-        print(f"Antal barn:{len(stefansBarn)}")
+        print(f"Antal spelare:{len(allPlayers)}")
     elif action == "1":
-        for namn in stefansBarn:
+        for namn in allPlayers:
             print(namn)
     elif action == "3":
-        namn = input("Ange namn på nya barnet")
-        stefansBarn.append(namn)
+        namn = input("Ange namn på nya spelaren")
+        allPlayers.append(namn)
     elif action == "5":
         searchQuery = input("Sök efter:").lower()
-        for namn in stefansBarn:
+        for namn in allPlayers:
             lowerCaseNamn = namn.lower()
             index = lowerCaseNamn.find(searchQuery)
             if index != -1:
